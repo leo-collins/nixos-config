@@ -10,5 +10,6 @@
     ./modules/users.nix
     ./modules/ssh.nix
     ./modules/packages.nix
+    ./modules/shells.nix
   ];
 }
