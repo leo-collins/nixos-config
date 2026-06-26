@@ -8,6 +8,7 @@
     ./programs/zen-browser.nix
     ./programs/lazygit.nix
     ./programs/zsh.nix
+    ./programs/starship.nix
   ];
 
   home.username = "leo";
