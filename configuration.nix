@@ -6,6 +6,7 @@
     ./modules/system.nix
     ./modules/networking.nix
     ./modules/desktop.nix
+    ./modules/graphics.nix
     ./modules/audio.nix
     ./modules/users.nix
     ./modules/ssh.nix
