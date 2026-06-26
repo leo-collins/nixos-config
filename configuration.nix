@@ -7,6 +7,7 @@
     ./modules/networking.nix
     ./modules/desktop.nix
     ./modules/graphics.nix
+    ./modules/steam.nix
     ./modules/audio.nix
     ./modules/bluetooth.nix
     ./modules/users.nix
