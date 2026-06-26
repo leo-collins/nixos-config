@@ -4,6 +4,7 @@
   imports = [
     ./packages.nix
     ./programs/firefox.nix
+    ./programs/codex.nix
     ./programs/git.nix
     ./programs/zen-browser.nix
     ./programs/lazygit.nix

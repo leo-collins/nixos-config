@@ -6,7 +6,6 @@
     wget
     curl
     vim
-    codex
     tree
   ];
 }
