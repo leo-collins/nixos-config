@@ -8,6 +8,7 @@
     ./modules/desktop.nix
     ./modules/graphics.nix
     ./modules/audio.nix
+    ./modules/bluetooth.nix
     ./modules/users.nix
     ./modules/ssh.nix
     ./modules/packages.nix
