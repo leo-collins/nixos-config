@@ -6,6 +6,7 @@
     ./programs/firefox.nix
     ./programs/git.nix
     ./programs/zen-browser.nix
+    ./programs/lazygit.nix
   ];
 
   home.username = "leo";
