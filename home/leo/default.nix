@@ -12,6 +12,7 @@
     ./programs/starship.nix
     ./programs/fzf.nix
     ./programs/alacritty.nix
+    ./programs/eza.nix
   ];
 
   home.username = "leo";
