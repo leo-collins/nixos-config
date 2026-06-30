@@ -10,6 +10,7 @@
     ./programs/lazygit.nix
     ./programs/zsh.nix
     ./programs/starship.nix
+    ./programs/fzf.nix
   ];
 
   home.username = "leo";
