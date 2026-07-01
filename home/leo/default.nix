@@ -15,6 +15,7 @@
     ./programs/eza.nix
     ./programs/tmux.nix
     ./programs/btop.nix
+    ./programs/gnome.nix
   ];
 
   home.username = "leo";
