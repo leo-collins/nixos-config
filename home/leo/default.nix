@@ -14,6 +14,7 @@
     ./programs/alacritty.nix
     ./programs/eza.nix
     ./programs/tmux.nix
+    ./programs/btop.nix
   ];
 
   home.username = "leo";
