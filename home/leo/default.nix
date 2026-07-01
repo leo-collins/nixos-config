@@ -13,6 +13,7 @@
     ./programs/fzf.nix
     ./programs/alacritty.nix
     ./programs/eza.nix
+    ./programs/tmux.nix
   ];
 
   home.username = "leo";
