@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   dconf.settings = {
@@ -22,6 +22,10 @@
       custom-theme-shrink = true;
       show-trash = false;
       show-mounts = false;
+    };
+
+    "org/gnome/desktop/interface" = {
+      scaling-factor = lib.gvariant.mkUint32 2;
     };
   };
 }
