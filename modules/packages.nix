@@ -1,5 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = [ ];
+  environment.systemPackages = with pkgs; [ 
+    parted
+    unzip
+  ];
 }
