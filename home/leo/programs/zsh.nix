@@ -10,7 +10,6 @@
       enable = true;
       highlighters = [
         "brackets"
-        "cursor"
       ];
     };
     shellAliases = {
