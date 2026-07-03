@@ -6,6 +6,7 @@
     fsType = "btrfs";
     options = [ "nofail" "x-systemd.device-timeout=5s" ];
   };
+
   fileSystems."/mnt/1tbssd" = {
     device = "/dev/disk/by-uuid/f5cbbccd-cac1-4062-9d85-48de8c917114";
     fsType = "btrfs";

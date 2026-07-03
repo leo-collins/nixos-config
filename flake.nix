@@ -1,5 +1,5 @@
 {
-  description = "Living room PC NixOS system";
+  description = "Leo's NixOS systems";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -18,29 +18,28 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-
-      specialArgs = {
-        inherit inputs;
+  outputs = { nixpkgs, home-manager, ... }@inputs:
+    let
+      mkHost = { system, modules }: nixpkgs.lib.nixosSystem {
+        inherit system modules;
+        specialArgs = { inherit inputs; };
       };
+    in
+    {
+      nixosConfigurations.heron = mkHost {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/heron
 
-      modules = [
-        ./configuration.nix
-
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "hm-backup";
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-          };
-
-          home-manager.users.leo = import ./home/leo;
-        }
-      ];
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "hm-backup";
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.leo = import ./home/leo;
+          }
+        ];
+      };
     };
-  };
 }

@@ -3,14 +3,9 @@
 {
   programs.steam = {
     enable = true;
-
     remotePlay.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
-
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
-
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
     package = pkgs.steam.override {
       extraEnv = {
         MANGOHUD = "1";
@@ -18,5 +13,6 @@
       };
     };
   };
+
   programs.gamemode.enable = true;
 }

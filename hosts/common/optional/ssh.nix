@@ -4,10 +4,7 @@
   services.openssh = {
     enable = true;
     openFirewall = true;
-
-    settings = {
-      PermitRootLogin = "no";
-    };
+    settings.PermitRootLogin = "no";
   };
 
   users.users.leo.openssh.authorizedKeys.keys = [

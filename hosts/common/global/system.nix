@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   time.timeZone = "Europe/London";
@@ -22,12 +18,7 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  nixpkgs.config.allowUnfree = true;
-
-  system.stateVersion = "26.05";
-
   security.sudo.extraConfig = ''
     Defaults timestamp_timeout=30
   '';
-
 }
