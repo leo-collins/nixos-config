@@ -3,22 +3,6 @@
 {
   imports = [
     ./global
-    ./packages.nix
-    ./programs/firefox.nix
-    ./programs/codex.nix
-    ./programs/git.nix
-    ./programs/vim.nix
-    ./programs/zen-browser.nix
-    ./programs/lazygit.nix
-    ./programs/zsh.nix
-    ./programs/starship.nix
-    ./programs/fzf.nix
-    ./programs/alacritty.nix
-    ./programs/eza.nix
-    ./programs/tmux.nix
-    ./programs/btop.nix
-    ./programs/gnome.nix
-    ./programs/mangohud.nix
   ];
 
   # symlink cursor icons into home directory.
