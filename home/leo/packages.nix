@@ -2,10 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    git
     wget
     curl
-    vim
     tree
   ];
 }

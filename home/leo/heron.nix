@@ -7,6 +7,7 @@
     ./programs/firefox.nix
     ./programs/codex.nix
     ./programs/git.nix
+    ./programs/vim.nix
     ./programs/zen-browser.nix
     ./programs/lazygit.nix
     ./programs/zsh.nix
