@@ -16,6 +16,7 @@
     ./programs/tmux.nix
     ./programs/btop.nix
     ./programs/gnome.nix
+    ./programs/mangohud.nix
   ];
 
   home.username = "leo";
