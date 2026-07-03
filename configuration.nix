@@ -6,7 +6,7 @@
     ./modules/storage.nix
     ./modules/system.nix
     ./modules/networking.nix
-    ./desktop/plasma.nix
+    ./desktop/gnome.nix
     ./modules/graphics.nix
     ./modules/steam.nix
     ./modules/audio.nix
