@@ -3,6 +3,8 @@
 {
   imports = [
     ./global
+    ./programs/desktop
+    ./programs/games
   ];
 
   # symlink cursor icons into home directory.

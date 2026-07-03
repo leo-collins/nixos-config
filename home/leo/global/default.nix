@@ -3,8 +3,6 @@
 {
   imports = [
     ../programs/cli
-    ../programs/desktop
-    ../programs/games
   ];
 
   home = {
