@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./global
     ./packages.nix
     ./programs/firefox.nix
     ./programs/codex.nix
@@ -19,10 +20,6 @@
     ./programs/mangohud.nix
   ];
 
-  home.username = "leo";
-  home.homeDirectory = "/home/leo";
-  home.stateVersion = "26.05";
-  
   # symlink cursor icons into home directory.
   # This fixes an issue where some apps cannot find the cursor
   # and default to a different (non-scaled) cursor, e.g. in steam
@@ -35,6 +32,4 @@
     source = "${pkgs.kdePackages.breeze}/share/icons/breeze_cursors/";
     recursive = true;
   };
-
-  programs.home-manager.enable = true;
 }

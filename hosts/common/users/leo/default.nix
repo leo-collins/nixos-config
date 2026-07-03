@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   users.users.leo = {
@@ -7,4 +7,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
+
+  home-manager.users.leo =
+    import ../../../../home/leo/${config.networking.hostName}.nix;
 }

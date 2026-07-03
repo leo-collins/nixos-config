@@ -8,6 +8,7 @@
     ./system.nix
 
     ../common/global
+    ../common/users/leo
     ../common/optional/audio.nix
     ../common/optional/bluetooth.nix
     ../common/optional/gnome.nix
