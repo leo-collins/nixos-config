@@ -32,5 +32,11 @@
           ./hosts/heron
         ];
       };
+      nixosConfigurations.starling = mkHost {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/starling
+        ];
+      };
     };
 }
