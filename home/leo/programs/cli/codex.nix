@@ -19,7 +19,7 @@
 
     settings = {
       projects = {
-        "/home/leo/nixos".trust_level = "trusted";
+        "/home/leo".trust_level = "trusted";
       };
 
       tui = {
