@@ -13,6 +13,7 @@
     ./tmux.nix
     ./vim.nix
     ./zsh.nix
+    ./fastfetch.nix
   ];
 
   home.packages = with pkgs; [
