@@ -38,5 +38,11 @@
           ./hosts/starling
         ];
       };
+      nixosConfigurations.big-pigeon = mkHost {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/big-pigeon
+        ];
+      };
     };
 }
