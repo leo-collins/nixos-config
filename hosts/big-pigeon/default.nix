@@ -19,5 +19,6 @@
     ./services/plex.nix
     ./services/incus.nix
     ./services/nfs.nix
+    ./services/tailscale.nix
   ];
 }
