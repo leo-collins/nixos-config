@@ -18,5 +18,6 @@
     ./services/navidrome.nix
     ./services/plex.nix
     ./services/incus.nix
+    ./services/nfs.nix
   ];
 }
