@@ -19,17 +19,6 @@
         }
       ];
 
-      networks = [
-        {
-          name = "incusbr0";
-          type = "bridge";
-          config = {
-            "ipv4.address" = "auto";
-            "ipv6.address" = "none";
-          };
-        }
-      ];
-
       profiles = [
         {
           name = "default";
