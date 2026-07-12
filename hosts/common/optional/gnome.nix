@@ -7,6 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.dash-to-dock
+    wl-clipboard  # cli clipboard utils for wayland
   ];
 
   programs.dconf.enable = true;
