@@ -42,7 +42,8 @@
             eth0 = {
               type = "nic";
               name = "eth0";
-              network = "incusbr0";
+              nictype = "bridged";
+              parent = "br0";
             };
           };
         }

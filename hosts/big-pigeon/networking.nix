@@ -9,20 +9,36 @@
   # Required by Incus
   networking.nftables.enable = true;
 
-  networking.networkmanager.ensureProfiles.profiles."big-pigeon" = {
-    connection = {
-      id = "big-pigeon";
-      type = "ethernet";
-      interface-name = "eno1";
-      autoconnect = true;
+  networking.networkmanager.ensureProfiles.profiles = {
+    "big-pigeon-br0" = {
+      connection = {
+        id = "big-pigeon-br0";
+        type = "bridge";
+        interface-name = "br0";
+        autoconnect = true;
+      };
+
+      ipv4 = {
+        method = "manual";
+        address1 = "192.168.0.21/24,192.168.0.1";
+        dns = "9.9.9.9;1.1.1.1";
+      };
+
+      ipv6.method = "auto";
     };
 
-    ipv4 = {
-      method = "manual";
-      address1 = "192.168.0.21/24,192.168.0.1";
-      dns = "9.9.9.9;1.1.1.1";
-    };
+    "big-pigeon-eno1-bridge" = {
+      connection = {
+        id = "big-pigeon-eno1-bridge";
+        type = "ethernet";
+        interface-name = "eno1";
+        master = "br0";
+        slave-type = "bridge";
+        autoconnect = true;
+      };
 
-    ipv6.method = "auto";
+      ipv4.method = "disabled";
+      ipv6.method = "ignore";
+    };
   };
 }
