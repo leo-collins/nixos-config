@@ -11,7 +11,9 @@
     ../common/users/leo
 
     ../common/optional/ssh.nix
-
+    
+    # Services
     ./services/immich.nix
+    ./services/navidrome.nix
   ];
 }
