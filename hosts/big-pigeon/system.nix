@@ -2,6 +2,7 @@
 
 {
   boot.kernelPackages = lib.mkForce pkgs.linuxPackages;
+  boot.kernelModules = [ "coretemp" "drivetemp" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
