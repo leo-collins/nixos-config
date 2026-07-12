@@ -11,5 +11,7 @@
     ../common/users/leo
 
     ../common/optional/ssh.nix
+
+    ./services/immich.nix
   ];
 }
