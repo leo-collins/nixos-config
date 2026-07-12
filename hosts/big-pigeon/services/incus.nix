@@ -3,10 +3,11 @@
 {
   virtualisation.incus = {
     enable = true;
+    ui.enable = true;
 
     preseed = {
       config = {
-        "core.https_address" = "127.0.0.1:8443";
+        "core.https_address" = "0.0.0.0:8443";
       };
 
       storage_pools = [
@@ -48,4 +49,7 @@
     after = [ "zfs-import-tank.service" ];
     requires = [ "zfs-import-tank.service" ];
   };
+
+  # For the webui
+  networking.firewall.allowedTCPPorts = [ 8443 ];
 }
