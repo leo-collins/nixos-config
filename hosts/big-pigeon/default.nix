@@ -6,6 +6,7 @@
     ./networking.nix
     ./system.nix
     ./storage.nix
+    ./packages.nix
 
     ../common/global
     ../common/users/leo
