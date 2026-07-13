@@ -11,6 +11,7 @@
         "steam.desktop"
         "org.gnome.Nautilus.desktop"
         "Alacritty.desktop"
+        "feishin.desktop"
       ];
     };
 
