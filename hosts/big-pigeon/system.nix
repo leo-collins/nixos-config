@@ -8,4 +8,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   system.stateVersion = "26.05";
+
+  # Enable powertop auto-tuning on startup
+  powerManagement.powertop.enable = true;
 }
