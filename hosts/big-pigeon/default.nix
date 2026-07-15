@@ -24,5 +24,6 @@
     ./services/radarr.nix
     ./services/sonarr.nix
     ./services/prowlarr.nix
+    ./services/sabnzbd.nix
   ];
 }
