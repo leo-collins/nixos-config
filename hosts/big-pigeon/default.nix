@@ -19,6 +19,7 @@
     ./services/plex.nix
     ./services/incus.nix
     ./services/nfs.nix
+    ./services/samba.nix
     ./services/tailscale.nix
   ];
 }
