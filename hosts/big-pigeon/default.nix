@@ -16,14 +16,11 @@
     # Services
     ./services/immich.nix
     ./services/navidrome.nix
-    ./services/plex.nix
     ./services/incus.nix
     ./services/nfs.nix
     ./services/samba.nix
     ./services/tailscale.nix
-    ./services/radarr.nix
-    ./services/sonarr.nix
-    ./services/prowlarr.nix
-    ./services/sabnzbd.nix
+
+    ./services/media
   ];
 }
