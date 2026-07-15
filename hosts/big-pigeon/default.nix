@@ -21,5 +21,6 @@
     ./services/nfs.nix
     ./services/samba.nix
     ./services/tailscale.nix
+    ./services/radarr.nix
   ];
 }
