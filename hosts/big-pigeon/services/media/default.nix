@@ -14,4 +14,5 @@
   # radarr/sonarr/sabnzbd users will be in this group
   users.groups.media = {};
   users.users.leo.extraGroups = [ "media" ];
+  users.users.plex.extraGroups = [ "media" ];
 }
