@@ -16,6 +16,7 @@
         port = 8080;
         no_smart_dupes = 4;  # tag duplicate jobs
         propagation_delay = 5;
+        permissions = "775";
         download_dir = "/tank/media/usenet/incomplete";
         complete_dir = "/tank/media/usenet/complete";
         nzb_backup_dir = "/tank/media/usenet/nzb-backup";
