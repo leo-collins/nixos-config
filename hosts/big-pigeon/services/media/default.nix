@@ -7,6 +7,7 @@
     ./radarr.nix
     ./sabnzbd.nix
     ./prowlarr.nix
+    ./recyclarr.nix
   ];
 
   # create a media group to own media directories

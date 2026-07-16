@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  services.recyclarr = {
+    enable = true;
+  };
+}
