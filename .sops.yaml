@@ -1,0 +1,10 @@
+key:
+  - &leo age1ykj6y9x2rt37xrhpw8rz46nqxmy7qagz64yquh8gwrd9wvjx8v5s45439a
+  - &big_pigeon age1as64gd6pkr3cptlfen237qq802d7szq2v0xkrqqpz5a59ahtu96slge7hn
+
+creation_rules:
+  - path_regex: secrets/big-pigeon.yaml$
+    key_groups:
+      - age:
+          - *leo
+          - *big_pigeon

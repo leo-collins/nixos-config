@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./networking.nix
+    ./secrets.nix
     ./system.nix
     ./storage.nix
     ./packages.nix
