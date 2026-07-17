@@ -1,10 +1,24 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
 {
+  sops.secrets.sonarr_api_key = {};
+
+  sops.templates."sonarr.env" = {
+    owner = config.services.sonarr.user;
+    mode = "0400";
+    restartUnits = [ "sonarr.service" ];
+    content = ''
+      SONARR__AUTH__APIKEY=${config.sops.placeholder.sonarr_api_key}
+    '';
+  };
+
   services.sonarr = {
     enable = true;
     openFirewall = true;
     group = "media";
+    environmentFiles = [
+      config.sops.templates."sonarr.env".path
+    ];
 
     settings = {
       server = {
