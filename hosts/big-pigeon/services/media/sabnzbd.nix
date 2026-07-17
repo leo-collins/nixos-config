@@ -1,11 +1,30 @@
-{ ... }:
+{ config, ... }:
 
 {
+  sops.secrets.sabnzbd_newshosting_username = {};
+
+  sops.secrets.sabnzbd_newshosting_password = {};
+
+  sops.templates."sabnzbd-newshosting.ini" = {
+    owner = config.services.sabnzbd.user;
+    group = config.services.sabnzbd.group;
+    mode = "0400";  # only user `sabnzbd` can read
+    restartUnits = [ "sabnzbd.service" ];  # restart the service if we change the secret
+    content = ''
+      [servers.newshosting]
+      username = ${config.sops.placeholder.sabnzbd_newshosting_username}
+      password = ${config.sops.placeholder.sabnzbd_newshosting_password}
+    '';
+  };
+
   services.sabnzbd = {
     enable = true;
-    allowConfigWrite = true;  # Ideally use sops-nix for secrets
+    allowConfigWrite = true;
     openFirewall = true;
     group = "media";
+    secretFiles = [
+      config.sops.templates."sabnzbd-newshosting.ini".path
+    ];
 
     settings = {
       misc = {
