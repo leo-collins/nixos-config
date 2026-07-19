@@ -21,6 +21,7 @@
     ./services/nfs.nix
     ./services/samba.nix
     ./services/tailscale.nix
+    ./services/caddy.nix
 
     ./services/media
   ];
