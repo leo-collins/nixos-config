@@ -3,6 +3,7 @@
 {
   services.tailscale = {
     enable = true;
+    useRoutingFeatures = "server";  # subnet router
   };
 
   networking.nftables.enable = true;
