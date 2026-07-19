@@ -9,4 +9,6 @@
   };
 
   boot.zfs.extraPools = [ "tank" ];
+
+  boot.zfs.forceImportRoot = false;
 }
