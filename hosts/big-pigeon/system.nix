@@ -11,4 +11,9 @@
 
   # Enable powertop auto-tuning on startup
   powerManagement.powertop.enable = true;
+
+  # Fix for VGA connector reporting all-zero EDID
+  # If you plug a VGA cable in, it will not be picked up
+  # automatically. You'll need to reboot.
+  boot.kernelParams = [ "drm_kms_helper.poll=0" ];
 }
