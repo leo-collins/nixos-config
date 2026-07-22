@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./networking.nix
     ./system.nix
+    ./secrets.nix
 
     ../common/global
     ../common/users/leo
