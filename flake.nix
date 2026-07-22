@@ -49,5 +49,11 @@
           ./hosts/big-pigeon
         ];
       };
+      nixosConfigurations.robin = mkHost {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/robin
+        ];
+      };
     };
 }

@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./global
+
+    ./programs/desktop
+  ];
+}
