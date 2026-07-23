@@ -21,6 +21,10 @@
         home-manager.follows = "home-manager";
       };
     };
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follow = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, ... }@inputs:
@@ -52,6 +56,7 @@
       nixosConfigurations.robin = mkHost {
         system = "x86_64-linux";
         modules = [
+          inputs.nixos-hardware.nixosModules.microsoft-surface-go
           ./hosts/robin
         ];
       };
