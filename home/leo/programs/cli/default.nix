@@ -5,7 +5,6 @@
     ./btop.nix
     ./codex.nix
     ./eza.nix
-    ./fish.nix
     ./fzf.nix
     ./git.nix
     ./lazygit.nix
