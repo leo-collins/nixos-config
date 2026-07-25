@@ -14,6 +14,7 @@
     ../common/optional/desktop-programs
     ../common/optional/gnome.nix
     ../common/optional/nvidia.nix
+    ../common/optional/nfs-client.nix
     ../common/optional/ssh.nix
     ../common/optional/steam.nix
   ];
