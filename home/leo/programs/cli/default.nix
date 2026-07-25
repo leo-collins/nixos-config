@@ -13,6 +13,7 @@
     ./vim.nix
     ./zsh.nix
     ./fastfetch.nix
+    ./direnv.nix
   ];
 
   home.packages = with pkgs; [
