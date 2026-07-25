@@ -15,5 +15,7 @@
     ../common/optional/ssh.nix
     ../common/optional/gnome.nix
     ../common/optional/desktop-programs
+
+    ../common/optional/desktop-programs/picard.nix
   ];
 }
