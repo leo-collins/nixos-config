@@ -42,19 +42,6 @@ in
         "scrub"
       ];
 
-      # Beets normally makes names Windows-safe, replacing `"` with `_`.
-      # Preserve the quote in media names such as `12" Vinyl`, as Picard did.
-      replace = {
-        "[\\\\/]" = "_";
-        "^\\." = "_";
-        "[\\x00-\\x1f]" = "_";
-        "[<>:\\?\\*\\|]" = "_";
-        "\\.$" = "_";
-        "\\s+$" = "";
-        "^\\s+" = "";
-        "^-" = "_";
-      };
-
       paths.default = "$albumartist/($release_date) $album%if{$catalog_or_barcode, {$catalog_or_barcode$}}%if{$media, [$media]}/$disc-$track_2 - %left{$title,64}";
 
       # The inline plugin reads these fields from the top level of config.yaml.
