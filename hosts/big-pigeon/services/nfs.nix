@@ -9,6 +9,7 @@
         /tank        192.168.0.0/24(ro,fsid=0,crossmnt,no_subtree_check)
         /tank/photos 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
         /tank/games  192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
+        /tank/misc-storage 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
       '';
     };
   };
