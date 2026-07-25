@@ -3,8 +3,6 @@
 {
   imports = [
     ./global
-
-    ./programs/cli/beets.nix
   ];
 
   xdg.userDirs = {
