@@ -24,7 +24,10 @@ in
   ];
 
   home.file.".config/MusicBrainz/Picard.ini" = {
-    source = config.lib.file.mkOutOfStoreSymlink ./Picard.ini;
+    # Use a string rather than a Nix path here.  A Nix path is copied to the
+    # store during evaluation, which would make this link read-only.
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/nixos/home/leo/programs/desktop/picard/Picard.ini";
     force = true;
   };
 }
