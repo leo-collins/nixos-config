@@ -42,4 +42,10 @@ in
     fsType = "nfs";
     options = nfsOptions;
   };
+
+  fileSystems."/mnt/big-pigeon/music-downloads" = {
+    device = "${bigPigeon}:/music-downloads";
+    fsType = "nfs";
+    options = nfsOptions;
+  };
 }

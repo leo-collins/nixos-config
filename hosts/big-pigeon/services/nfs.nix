@@ -14,6 +14,7 @@ in
         /tank/games  192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
         /tank/misc-storage 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=1000)
         /tank/music 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=${mediaGid})
+        /tank/music-downloads 192.168.0.0/24(rw,sync,no_subtree_check,all_squash,anonuid=1000,anongid=${mediaGid})
       '';
     };
   };

@@ -28,8 +28,8 @@
       };
       shares.directories = [ "/tank/music" ];
       directories = {
-        downloads = "/tank/misc-storage/music/complete";
-        incomplete = "/tank/misc-storage/music/incomplete";
+        downloads = "/tank/music-downloads/complete";
+        incomplete = "/tank/music-downloads/incomplete";
       };
       global = {
         upload = {
