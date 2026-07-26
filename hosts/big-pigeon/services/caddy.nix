@@ -34,6 +34,16 @@
       useACMEHost = "int.big-pigeon.com";
       extraConfig = "reverse_proxy 127.0.0.1:3000";
     };
+
+    virtualHosts."radarr.int.big-pigeon.com" = {
+      useACMEHost = "int.big-pigeon.com";
+      extraConfig = "reverse_proxy 127.0.0.1:7878";
+    };
+
+    virtualHosts."sonarr.int.big-pigeon.com" = {
+      useACMEHost = "int.big-pigeon.com";
+      extraConfig = "reverse_proxy 127.0.0.1:8989";
+    };
   };
 
   sops.secrets.cloudflare_dns_api_token = {};
