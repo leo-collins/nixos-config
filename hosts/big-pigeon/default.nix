@@ -23,6 +23,7 @@
     ./services/tailscale.nix
     ./services/caddy.nix
     ./services/slskd.nix
+    ./services/actual.nix
 
     ./services/media
   ];

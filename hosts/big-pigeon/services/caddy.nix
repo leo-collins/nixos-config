@@ -29,6 +29,11 @@
       useACMEHost = "int.big-pigeon.com";
       extraConfig = "reverse_proxy 192.168.0.143:8123";
     };
+
+    virtualHosts."budget.int.big-pigeon.com" = {
+      useACMEHost = "int.big-pigeon.com";
+      extraConfig = "reverse_proxy 127.0.0.1:3000";
+    };
   };
 
   sops.secrets.cloudflare_dns_api_token = {};
