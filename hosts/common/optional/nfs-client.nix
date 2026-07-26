@@ -4,6 +4,7 @@ let
   bigPigeon = "192.168.0.21";
   nfsOptions = [
     "nfsvers=4.2"
+    "rw"
     "x-systemd.automount"
     "noauto"
     "nofail"
@@ -12,7 +13,7 @@ let
   ];
 in
 {
-  # Remember to add the share to hosts/big-pigeon/services/nfs.nix
+  # Remember to add shares to hosts/big-pigeon/services/nfs.nix
   # And rebuild on big-pigeon
   fileSystems."/mnt/big-pigeon/photos" = {
     device = "${bigPigeon}:/photos";
@@ -31,7 +32,14 @@ in
     fsType = "nfs";
     options = nfsOptions;
   };
-  
+
+  fileSystems."/mnt/big-pigeon/misc-storage/music" = {
+    device = "${bigPigeon}:/misc-storage/music";
+    fsType = "nfs";
+    options = nfsOptions;
+    depends = [ "/mnt/big-pigeon/misc-storage" ];
+  };
+
   fileSystems."/mnt/big-pigeon/music" = {
     device = "${bigPigeon}:/music";
     fsType = "nfs";
