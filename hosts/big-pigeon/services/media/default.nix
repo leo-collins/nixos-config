@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./group.nix
     ./plex.nix
     ./sonarr.nix
     ./radarr.nix
@@ -10,9 +11,7 @@
     ./recyclarr.nix
   ];
 
-  # create a media group with stable gid to own media directories
-  # radarr/sonarr/sab/slskd users will be in this group
-  users.groups.media.gid = 986;
+  # radarr/sonarr/sab/slskd users are all members of the shared media group.
   users.users.leo.extraGroups = [ "media" ];
   users.users.plex.extraGroups = [ "media" ];
 

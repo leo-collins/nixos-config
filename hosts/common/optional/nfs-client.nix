@@ -13,8 +13,12 @@ let
   ];
 in
 {
+  imports = [ ../../big-pigeon/services/media/group.nix ];
+
   # Remember to add shares to hosts/big-pigeon/services/nfs.nix
   # And rebuild on big-pigeon
+  users.users.leo.extraGroups = [ "media" ];
+
   fileSystems."/mnt/big-pigeon/photos" = {
     device = "${bigPigeon}:/photos";
     fsType = "nfs";
