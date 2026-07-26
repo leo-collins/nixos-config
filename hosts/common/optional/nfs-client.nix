@@ -37,13 +37,6 @@ in
     options = nfsOptions;
   };
 
-  fileSystems."/mnt/big-pigeon/misc-storage/music" = {
-    device = "${bigPigeon}:/misc-storage/music";
-    fsType = "nfs";
-    options = nfsOptions;
-    depends = [ "/mnt/big-pigeon/misc-storage" ];
-  };
-
   fileSystems."/mnt/big-pigeon/music" = {
     device = "${bigPigeon}:/music";
     fsType = "nfs";
