@@ -17,6 +17,5 @@
     ../common/optional/gnome.nix
     ../common/optional/desktop-programs
 
-    ../common/optional/desktop-programs/picard.nix
   ];
 }
