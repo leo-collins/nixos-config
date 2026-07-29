@@ -9,7 +9,7 @@
     package = pkgs.btop.override (
       lib.optionalAttrs pkgs.stdenv.isLinux {
         cudaSupport = true;
-      };
-    };
+      }
+    );
   };
 }
