@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -6,8 +6,9 @@
   ];
 
   home = {
-    username = "leo";
-    homeDirectory = "/home/leo";
+    # We allow these to be overriden, by e.g. a macos host
+    username = lib.mkDefault "leo";
+    homeDirectory = lib.mkDefault "/home/leo";
     stateVersion = "26.05";
   };
 

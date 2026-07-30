@@ -33,6 +33,17 @@
         inherit system modules;
         specialArgs = { inherit inputs; };
       };
+
+      mkHome = { system, modules }:
+        inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+
+          inherit modules;
+          extraSpecialArgs = { inherit inputs; };
+        };
     in
     {
       nixosConfigurations.heron = mkHost {
@@ -58,6 +69,12 @@
         modules = [
           inputs.nixos-hardware.nixosModules.microsoft-surface-go
           ./hosts/robin
+        ];
+      };
+      homeConfigurations.macbook = mkHome {
+        system = "aarch64-darwin";
+        modules = [
+          ./home/leo/macbook.nix
         ];
       };
     };
