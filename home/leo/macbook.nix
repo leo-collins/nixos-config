@@ -5,6 +5,7 @@
 {
   imports = [
     ./global
+    ./programs/desktop/alacritty.nix
   ];
 
   home = {
