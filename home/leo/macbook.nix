@@ -6,7 +6,7 @@
   imports = [
     ./global
     ./programs/desktop/alacritty.nix
-    ./programs/cli/neovim.nix
+    ./programs/cli/neovim
   ];
 
   home = {
