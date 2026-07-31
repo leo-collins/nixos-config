@@ -28,9 +28,17 @@
         };
       };
 
-      settings.pickers.find_files = {
-        hidden = true;
-        follow = true;
+      settings = {
+        pickers.find_files = {
+          hidden = true;
+          follow = true;
+        };
+        defaults = {
+          file_ignore_patterns = [
+            "^.git/"
+            "^__pycache__/"
+          ];
+        };
       };
 
       extensions.fzf-native = {
