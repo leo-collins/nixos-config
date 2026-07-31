@@ -1,7 +1,8 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   imports = [
+    inputs.nixvim.homeModules.nixvim
     ./completion.nix
     ./keymaps.nix
     ./lsp.nix

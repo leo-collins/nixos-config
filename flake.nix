@@ -79,7 +79,6 @@
       homeConfigurations.macbook = mkHome {
         system = "aarch64-darwin";
         modules = [
-          inputs.nixvim.homeModules.nixvim
           ./home/leo/macbook.nix
         ];
       };

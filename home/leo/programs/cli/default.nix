@@ -8,6 +8,7 @@
     ./fzf.nix
     ./git.nix
     ./lazygit.nix
+    ./neovim
     ./starship.nix
     ./tmux.nix
     ./vim.nix
