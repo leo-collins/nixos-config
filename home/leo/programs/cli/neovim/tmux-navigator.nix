@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 # Tmux navigator plugin
 # https://github.com/christoomey/vim-tmux-navigator
@@ -32,4 +32,8 @@
       }
     ];
   };
+
+  programs.tmux.plugins = [
+    pkgs.tmuxPlugins.vim-tmux-navigator
+  ];
 }
