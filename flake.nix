@@ -21,9 +21,14 @@
         home-manager.follows = "home-manager";
       };
     };
+
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
     };
   };
 
@@ -74,6 +79,7 @@
       homeConfigurations.macbook = mkHome {
         system = "aarch64-darwin";
         modules = [
+          inputs.nixvim.homeModules.nixvim
           ./home/leo/macbook.nix
         ];
       };
