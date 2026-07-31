@@ -7,10 +7,11 @@
     opts = {
       number = true;
       relativenumber = true;
+      cursorline = true;
       signcolumn = "yes";
 
       expandtab = true;
-      shiftwidth = 2;
+      shiftwidth = 4;
       tabstop = 2;
 
       ignorecase = true;
