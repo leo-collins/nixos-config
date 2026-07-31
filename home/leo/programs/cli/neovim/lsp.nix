@@ -6,8 +6,13 @@
 
 {
   programs.nixvim = {
+    plugins.lspconfig.enable = true;
+
     lsp = {
-      servers.nixd.enable = true;
+      servers = {
+        nixd.enable = true;
+        pyrefly.enable = true;
+      };
 
       keymaps = [
         {
