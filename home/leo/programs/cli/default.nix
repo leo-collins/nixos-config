@@ -11,7 +11,6 @@
     ./neovim
     ./starship.nix
     ./tmux.nix
-    ./vim.nix
     ./zsh.nix
     ./fastfetch.nix
     ./direnv.nix

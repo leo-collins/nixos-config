@@ -3,6 +3,7 @@
 {
   programs.nixvim = {
     globals.mapleader = " ";
+    vimAlias = true;
 
     opts = {
       number = true;
@@ -12,7 +13,7 @@
 
       expandtab = true;
       shiftwidth = 4;
-      tabstop = 2;
+      tabstop = 4;
 
       ignorecase = true;
       smartcase = true;
