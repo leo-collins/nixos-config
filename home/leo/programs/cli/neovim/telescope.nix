@@ -32,11 +32,18 @@
         pickers.find_files = {
           hidden = true;
           follow = true;
+          no_ignore = false;
+          no_ignore_parent = false;
         };
         defaults = {
           file_ignore_patterns = [
             "%.git/"
             "__pycache__/"
+            "%.direnv/"
+            # rust
+            "target/release"
+            "target/debug"
+            "%.venv/"
           ];
         };
       };
