@@ -35,8 +35,8 @@
         };
         defaults = {
           file_ignore_patterns = [
-            "^.git/"
-            "^__pycache__/"
+            "%.git/"
+            "__pycache__/"
           ];
         };
       };
