@@ -51,7 +51,7 @@ in
   };
 
   # openFirewall only opens the Soulseek port, and not the webui port
-  networking.firewall.allowedTCPPorts = [ 5030 ];
+  # networking.firewall.allowedTCPPorts = [ 5030 ];
 
   systemd.services.slskd = {
     requires = lib.optional proxy.enable "tailscale-proxy.service";
