@@ -14,6 +14,7 @@
     ./zsh.nix
     ./fastfetch.nix
     ./direnv.nix
+    ./nh.nix
   ];
 
   home.packages = with pkgs; [
