@@ -76,7 +76,7 @@
           ./hosts/robin
         ];
       };
-      homeConfigurations.macbook = mkHome {
+      homeConfigurations."lac224@IC-X149F9H0WT" = mkHome {
         system = "aarch64-darwin";
         modules = [
           ./home/leo/macbook.nix
