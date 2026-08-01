@@ -16,6 +16,7 @@
     ../common/optional/nvidia.nix
     ../common/optional/nfs-client.nix
     ../common/optional/ssh.nix
+    ../common/optional/tailscale.nix
     ../common/optional/steam.nix
   ];
 }

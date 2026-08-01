@@ -13,6 +13,7 @@
     ../common/users/leo
 
     ../common/optional/ssh.nix
+    ../common/optional/tailscale.nix 
     
     # Services
     # ./services/immich.nix
@@ -20,7 +21,6 @@
     ./services/incus.nix
     ./services/nfs.nix
     ./services/samba.nix
-    ./services/tailscale.nix
     ./services/caddy.nix
     ./services/slskd.nix
     ./services/actual.nix
