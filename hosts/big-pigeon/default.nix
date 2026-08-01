@@ -22,6 +22,7 @@
     ./services/nfs.nix
     ./services/samba.nix
     ./services/caddy.nix
+    ./services/tailscale_proxy.nix
     ./services/slskd.nix
     ./services/actual.nix
 

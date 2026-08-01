@@ -1,5 +1,8 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+let
+  proxy = config.services.tailscaleProxy;
+in
 {
   sops.secrets = {
     slskd_slsk_username = {};
@@ -20,7 +23,9 @@
   services.slskd = {
     enable = true;
     group = "media";
-    openFirewall = true;
+    # Mullvad does not support forwarded ports. Keeping the Soulseek port
+    # closed also prevents incoming connections from bypassing the proxy.
+    openFirewall = false;
     environmentFile = config.sops.templates."slskd.env".path;
     settings = {
       web = {
@@ -37,12 +42,20 @@
           speed_limit = 1024;  #KiB/s
         };
       };
+      soulseek.connection.proxy = {
+        enabled = proxy.enable;
+        address = proxy.listenAddress;
+        port = proxy.port;
+      };
     };
   };
 
   # openFirewall only opens the Soulseek port, and not the webui port
   networking.firewall.allowedTCPPorts = [ 5030 ];
 
-  systemd.services.slskd.serviceConfig.UMask = "0002";
+  systemd.services.slskd = {
+    requires = lib.optional proxy.enable "tailscale-proxy.service";
+    after = lib.optional proxy.enable "tailscale-proxy.service";
+    serviceConfig.UMask = "0002";
+  };
 }
-
