@@ -13,6 +13,7 @@
     ./tmux-navigator.nix
     ./treesitter.nix
     ./which-key.nix
+    ./oil.nix
   ];
 
   programs.nixvim = {
