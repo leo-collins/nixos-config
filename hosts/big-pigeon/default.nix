@@ -24,6 +24,7 @@
     ./services/caddy.nix
     ./services/tailscale_proxy.nix
     ./services/slskd.nix
+    ./services/qbittorrent.nix
     ./services/actual.nix
 
     ./services/media
