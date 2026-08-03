@@ -14,6 +14,7 @@
     ./treesitter.nix
     ./which-key.nix
     ./oil.nix
+    ./lazygit.nix
   ];
 
   programs.nixvim = {
