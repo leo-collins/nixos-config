@@ -15,6 +15,8 @@
     ./fastfetch.nix
     ./direnv.nix
     ./nh.nix
+    ./fd.nix
+    ./ripgrep.nix
   ];
 
   home.packages = with pkgs; [
