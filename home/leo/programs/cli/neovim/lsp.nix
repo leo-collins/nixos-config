@@ -10,8 +10,12 @@
 
     lsp = {
       servers = {
-        nixd.enable = true;
-        pyrefly.enable = true;
+        nixd.enable = true;  # nix
+        pyrefly.enable = true;  # python
+        rust_analyzer.enable = true;  # rust
+        clangd.enable = true;  # C/C++
+        bashls.enable = true;  # bash
+        texlab.enable = true;  # latex
       };
 
       keymaps = [
