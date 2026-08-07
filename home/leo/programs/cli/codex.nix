@@ -34,7 +34,7 @@
         };
       };
 
-      features.memories = true;
+      # features.memories = true;
     };
   };
 
