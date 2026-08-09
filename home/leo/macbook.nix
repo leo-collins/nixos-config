@@ -7,6 +7,7 @@
     ./global
     ./programs/desktop/alacritty.nix
     ./programs/desktop/iina.nix
+    ./programs/games/prismlauncher.nix
   ];
 
   home = {
