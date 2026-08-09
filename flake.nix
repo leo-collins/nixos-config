@@ -29,6 +29,12 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
+      # nixvim recommends against using inputs.nixpkgs.follows = "nixpkgs"
+    };
+
+    nix-minecraft = {
+      url = "github:Infinidoge/nix-minecraft";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

@@ -28,5 +28,7 @@
     ./services/actual.nix
 
     ./services/media
+
+    ./services/minecraft.nix
   ];
 }
