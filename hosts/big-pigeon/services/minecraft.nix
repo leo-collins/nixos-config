@@ -19,6 +19,10 @@
     enable = true;
     eula = true;
     openFirewall = true;
+
+    # store servers on the zfs pool
+    # needed to manually create the `server-name` directory for this to work
+    dataDir = "/tank/games/minecraft";
     servers.fabric = {
       # To connect to server console, run:
       # tmux -S /run/minecraft/fabric.sock attach
