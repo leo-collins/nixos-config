@@ -88,5 +88,11 @@
           ./home/leo/macbook.nix
         ];
       };
+      homeConfigurations."lac224@thisbe" = mkHome {
+        system = "x86_64-linux";
+        modules = [
+          ./home/leo/thisbe.nix
+        ];
+      };
     };
 }
