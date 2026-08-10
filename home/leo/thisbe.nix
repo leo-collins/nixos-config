@@ -16,6 +16,10 @@
     ];
   };
 
+  # being inside nix-user-chroot breaks the ssh command. Create ~/.ssh/config and tell `ssh`
+  # to use it via the `-F` flag.
+  programs.git.settings.core.sshCommand = "ssh -F ${config.home.homeDirectory}/.ssh/config";
+
   # programs = {
   #   codex.settings.projects = {
   #     "${config.home.homeDirectory}/Coding/work/firedrake-dev".trust_level = "trusted";
