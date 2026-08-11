@@ -4,6 +4,7 @@
   imports = [
     inputs.nixvim.homeModules.nixvim
     ./completion.nix
+    ./dap.nix
     ./keymaps.nix
     ./lsp.nix
     ./options.nix
