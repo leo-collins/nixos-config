@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 # Home manager profile for thisbe
 
@@ -19,6 +19,9 @@
   # being inside nix-user-chroot breaks the ssh command. Create ~/.ssh/config and tell `ssh`
   # to use it via the `-F` flag.
   programs.git.settings.core.sshCommand = "ssh -F ${config.home.homeDirectory}/.ssh/config";
+
+  # set tmux default shell
+  programs.tmux.shell = "${pkgs.zsh}/bin/zsh";
 
   # programs = {
   #   codex.settings.projects = {
