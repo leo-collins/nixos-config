@@ -15,7 +15,7 @@
         rust_analyzer.enable = true;  # rust
         clangd.enable = true;  # C/C++
         bashls.enable = true;  # bash
-        texlab.enable = true;  # latex
+        # texlab.enable = true;  # using vimtex instead
       };
 
       keymaps = [

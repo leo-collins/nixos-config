@@ -16,6 +16,7 @@
     ./which-key.nix
     ./oil.nix
     ./lazygit.nix
+    ./vimtex.nix
   ];
 
   programs.nixvim = {
