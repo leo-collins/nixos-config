@@ -8,6 +8,10 @@
     ./programs/desktop/alacritty.nix
     ./programs/desktop/iina.nix
     ./programs/games/prismlauncher.nix
+
+    # vimtex brings in texlive which is pretty substantial,
+    # so we do not add it to neovim/default.nix
+    ./programs/cli/neovim/vimtex.nix
   ];
 
   home = {
