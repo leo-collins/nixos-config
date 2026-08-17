@@ -8,11 +8,26 @@
   programs.nixvim.plugins = {
     vimtex = {
       enable = true;
+      autoLoad = true;
+
+      settings = {
+        complete_enabled = true;
+        compiler_method = "latexmk";
+      };
+
       # use texliveFull. Warning: this brings in a lot of packages
       texlivePackage = pkgs.texliveFull;
     };
 
+    # add omni to tex blink completions. The other ones are the defaults
+    blink-cmp.settings.sources.per_filetype.tex = [
+      "lsp"
+      "path"
+      "snippets"
+      "buffer"
+      "omni"
+    ];
+
     treesitter.highlight.disable = [ "latex" ];
   };
 }
-
