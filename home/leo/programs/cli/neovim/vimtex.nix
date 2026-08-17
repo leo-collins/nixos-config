@@ -8,11 +8,8 @@
   programs.nixvim.plugins = {
     vimtex = {
       enable = true;
-
-      # additional packages to bring in
-      texlivePackage = pkgs.texliveMedium.withPackages (ps: [
-        ps.notoccite
-      ]);
+      # use texliveFull. Warning: this brings in a lot of packages
+      texlivePackage = pkgs.texliveFull;
     };
 
     treesitter.highlight.disable = [ "latex" ];
