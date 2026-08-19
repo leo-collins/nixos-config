@@ -16,7 +16,7 @@
     ../common/optional/tailscale.nix 
     
     # Services
-    # ./services/immich.nix
+    ./services/immich.nix
     ./services/navidrome.nix
     ./services/incus.nix
     ./services/nfs.nix
