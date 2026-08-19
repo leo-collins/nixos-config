@@ -11,7 +11,6 @@
     ../common/users/leo
     ../common/optional/audio.nix
     ../common/optional/bluetooth.nix
-    ../common/optional/desktop-programs
     ../common/optional/gnome.nix
     ../common/optional/nvidia.nix
     ../common/optional/nfs-client.nix
