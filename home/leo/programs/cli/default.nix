@@ -7,6 +7,7 @@
     ./eza.nix
     ./fzf.nix
     ./git.nix
+    ./delta.nix
     ./lazygit.nix
     ./neovim
     ./starship.nix
