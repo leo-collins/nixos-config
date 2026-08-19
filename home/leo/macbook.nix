@@ -7,6 +7,7 @@
     ./global
     ./programs/desktop/alacritty.nix
     ./programs/desktop/iina.nix
+    ./programs/desktop/feishin.nix
     ./programs/games/prismlauncher.nix
 
     # vimtex brings in texlive which is pretty substantial,
