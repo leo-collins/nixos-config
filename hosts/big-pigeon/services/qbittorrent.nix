@@ -39,6 +39,8 @@ in
         DefaultSavePath = "/tank/media/torrents/complete";
         TempPath = "/tank/media/torrents/incomplete";
         TempPathEnabled = true;
+
+        GlobalUPSpeedLimit = 1000;  # 1000 KiB/s
       };
 
       Preferences.WebUI = {
