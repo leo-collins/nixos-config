@@ -30,4 +30,9 @@
   # Make newly created files be writable by `media`
   # have to use mkForce since it is set to 0022 in the sonarr module
   systemd.services.sonarr.serviceConfig.UMask = lib.mkForce "0002";
+
+  services.caddy.virtualHosts."sonarr.int.big-pigeon.com" = {
+    useACMEHost = "int.big-pigeon.com";
+    extraConfig = "reverse_proxy 127.0.0.1:8989";
+  };
 }

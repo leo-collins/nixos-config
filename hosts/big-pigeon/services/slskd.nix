@@ -58,4 +58,9 @@ in
     after = lib.optional proxy.enable "tailscale-proxy.service";
     serviceConfig.UMask = "0002";
   };
+
+  services.caddy.virtualHosts."slskd.int.big-pigeon.com" = {
+    useACMEHost = "int.big-pigeon.com";
+    extraConfig = "reverse_proxy 127.0.0.1:5030";
+  };
 }

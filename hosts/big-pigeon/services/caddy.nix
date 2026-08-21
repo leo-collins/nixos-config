@@ -20,34 +20,9 @@
     enable = true;
     openFirewall = true;
 
-    virtualHosts."music.int.big-pigeon.com" = {
-      useACMEHost = "int.big-pigeon.com";
-      extraConfig = "reverse_proxy 127.0.0.1:4533";
-    };
-
     virtualHosts."ha.int.big-pigeon.com" = {
       useACMEHost = "int.big-pigeon.com";
       extraConfig = "reverse_proxy 192.168.0.143:8123";
-    };
-
-    virtualHosts."budget.int.big-pigeon.com" = {
-      useACMEHost = "int.big-pigeon.com";
-      extraConfig = "reverse_proxy 127.0.0.1:3000";
-    };
-
-    virtualHosts."radarr.int.big-pigeon.com" = {
-      useACMEHost = "int.big-pigeon.com";
-      extraConfig = "reverse_proxy 127.0.0.1:7878";
-    };
-
-    virtualHosts."sonarr.int.big-pigeon.com" = {
-      useACMEHost = "int.big-pigeon.com";
-      extraConfig = "reverse_proxy 127.0.0.1:8989";
-    };
-
-    virtualHosts."slskd.int.big-pigeon.com" = {
-      useACMEHost = "int.big-pigeon.com";
-      extraConfig = "reverse_proxy 127.0.0.1:5030";
     };
   };
 
