@@ -22,11 +22,6 @@
       };
     };
 
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       # nixvim recommends against using inputs.nixpkgs.follows = "nixpkgs"
@@ -78,7 +73,6 @@
       nixosConfigurations.robin = mkHost {
         system = "x86_64-linux";
         modules = [
-          inputs.nixos-hardware.nixosModules.microsoft-surface-go
           ./hosts/robin
         ];
       };
