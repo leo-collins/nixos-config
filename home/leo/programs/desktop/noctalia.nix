@@ -2,13 +2,15 @@
 
 {
   imports = [
-    inputs.noctalia.nixosModules.default
+    inputs.noctalia.homeModules.default
   ];
 
   programs.noctalia = {
     enable = true;
     package = pkgs.noctalia;
-    systemd.enable = true;
-    recommendedServices.enable = true;
+
+    settings = {
+      shell.font_family = "sans-serif";
+    };
   };
 }
