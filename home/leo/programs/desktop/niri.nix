@@ -3,12 +3,13 @@
 {
   home.packages = with pkgs; [
     brightnessctl
-    fuzzel
     playerctl
     swaylock
   ];
 
   programs.niri.settings = {
+    prefer-no-csd = true;
+
     outputs."eDP-1".scale = 1.25;
 
     binds = {
@@ -19,8 +20,8 @@
         hotkey-overlay.title = "Open a Terminal: alacritty";
       };
       "Mod+D" = {
-        action.spawn = "fuzzel";
-        hotkey-overlay.title = "Run an Application: fuzzel";
+        action.spawn = [ "noctalia" "msg" "panel-toggle" "launcher" ];
+        hotkey-overlay.title = "Run an Application: Noctalia launcher";
       };
       "Super+Alt+L" = {
         action.spawn = "swaylock";
