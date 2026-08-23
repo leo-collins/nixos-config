@@ -4,6 +4,7 @@
   imports = [
     ./global
     ./programs/desktop
+    ./programs/desktop/gnome.nix
     ./programs/games
   ];
 
