@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ lib, pkgs, config, ... }:
 
 # Home manager profile for thisbe
 
@@ -6,6 +6,10 @@
   imports = [
     ./global
   ];
+
+  # The systemd user manager runs outside nix-user-chroot and cannot resolve
+  # Home Manager's nh-clean unit symlinks into /nix/store.
+  programs.nh.clean.enable = lib.mkForce false;
 
   home = {
     username = "lac224";
