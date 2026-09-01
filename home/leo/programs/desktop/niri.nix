@@ -10,7 +10,30 @@
   programs.niri.settings = {
     prefer-no-csd = true;
 
-    outputs."eDP-1".scale = 1.25;
+    layout = {
+      gaps = 6;
+      focus-ring = {
+        width = 3;
+        active = {
+          color = "#cc241d";
+        };
+        inactive = {
+          color = "#cc241d";
+        };
+      };
+    };
+
+    window-rules = [
+      {
+        geometry-corner-radius = {
+          top-left = 8.0;
+          top-right = 8.0;
+          bottom-right = 8.0;
+          bottom-left = 8.0;
+        };
+        clip-to-geometry = true;
+      }
+    ];
 
     binds = {
       "Mod+Shift+Slash".action.show-hotkey-overlay = [];

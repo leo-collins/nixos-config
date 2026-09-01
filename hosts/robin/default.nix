@@ -6,6 +6,7 @@
     ./networking.nix
     ./system.nix
     ./secrets.nix
+    ./niri.nix
 
     ../common/global
     ../common/users/leo
