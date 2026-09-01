@@ -10,5 +10,6 @@
     ./programs/desktop/noctalia.nix
 
     ./programs/desktop/slack.nix
+    ./programs/desktop/obsidian.nix
   ];
 }
