@@ -8,5 +8,7 @@
     # ./programs/desktop/feishin.nix
     ./programs/desktop/niri.nix
     ./programs/desktop/noctalia.nix
+
+    ./programs/desktop/slack.nix
   ];
 }
