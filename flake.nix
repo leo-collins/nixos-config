@@ -88,6 +88,12 @@
           ./hosts/robin
         ];
       };
+      nixosConfigurations.mallard = mkHost {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/mallard
+        ];
+      };
       homeConfigurations."lac224@IC-X149F9H0WT" = mkHome {
         system = "aarch64-darwin";
         modules = [
