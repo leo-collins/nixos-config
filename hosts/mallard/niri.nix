@@ -1,11 +1,17 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  home-manager.users.leo.home.packages = [ pkgs.wtype ];
+
   home-manager.users.leo.programs.niri.settings.input.keyboard.xkb = {
     model = "applealu_iso";
     layout = "gb";
     variant = "";
-    options = "lv3:lalt_switch";
+  };
+
+  home-manager.users.leo.programs.niri.settings.binds."Alt+3" = {
+    action.spawn = [ "wtype" "#" ];
+    hotkey-overlay.hidden = true;
   };
 
   home-manager.users.leo.programs.niri.settings.outputs = {
