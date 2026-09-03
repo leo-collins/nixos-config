@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./networking.nix
     ./system.nix
+    ./niri.nix  # little-pigeon-specific niri config (monitor, etc.)
 
     ../common/global
     ../common/users/leo
