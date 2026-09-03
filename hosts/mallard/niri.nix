@@ -1,6 +1,13 @@
 { ... }:
 
 {
+  home-manager.users.leo.programs.niri.settings.input.keyboard.xkb = {
+    model = "applealu_iso";
+    layout = "gb";
+    variant = "";
+    options = "lv3:lalt_switch";
+  };
+
   home-manager.users.leo.programs.niri.settings.outputs = {
     # main monitor
     "HP Inc. HP 527pq VNG60605PG" = {
