@@ -7,8 +7,21 @@
     swaylock
   ];
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 24;
+  };
+
   programs.niri.settings = {
     prefer-no-csd = true;
+
+    cursor = {
+      theme = "Bibata-Modern-Classic";
+      size = 24;
+    };
 
     layout = {
       gaps = 6;
