@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  bigPigeon = "192.168.0.21";
+  bigPigeon = "192.168.1.21";
   nfsOptions = [
     "nfsvers=4.2"
     "rw"
