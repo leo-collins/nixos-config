@@ -11,6 +11,7 @@
     ../common/users/leo
 
     ../common/optional/ssh.nix
+    ../common/optional/nfs-client.nix
     ../common/optional/tailscale.nix
     ../common/optional/audio.nix
     ../common/optional/niri.nix
