@@ -13,10 +13,17 @@
     });
   in {
     enable = true;
+    setAsDefaultBrowser = true;
 
-    policies.ExtensionSettings = mkExtensionSettings {
-      "uBlock0@raymondhill.net" = "ublock-origin";
-      "{446900e4-71c2-419f-a6a7-df9c091e268b}" = "bitwarden-password-manager";
+    policies = {
+      # Leave password management and prompts to Bitwarden.
+      PasswordManagerEnabled = false;
+      OfferToSaveLogins = false;
+
+      ExtensionSettings = mkExtensionSettings {
+        "uBlock0@raymondhill.net" = "ublock-origin";
+        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = "bitwarden-password-manager";
+      };
     };
 
     profiles.default = {
@@ -25,6 +32,11 @@
       isDefault = true;
 
       settings = {
+        # Mark Zen's first-run welcome screen as already completed.
+        "zen.welcome-screen.seen" = true;
+        "signon.autofillForms" = false;
+        "signon.autofillForms.http" = false;
+        "signon.generation.enabled" = false;
         "gfx.webrender.all" = true;
         "media.ffmpeg.vaapi.enabled" = true;
         "widget.dmabuf.force-enabled" = true;
