@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     brightnessctl
     playerctl
-    swaylock
   ];
 
   home.pointerCursor = {
@@ -60,8 +59,8 @@
         hotkey-overlay.title = "Run an Application: Noctalia launcher";
       };
       "Super+Alt+L" = {
-        action.spawn = "swaylock";
-        hotkey-overlay.title = "Lock the Screen: swaylock";
+        action.spawn = [ "noctalia" "msg" "session" "lock" ];
+        hotkey-overlay.title = "Lock the Screen: Noctalia";
       };
       "Super+Alt+S" = {
         action.spawn-sh = "pkill orca || exec orca";
