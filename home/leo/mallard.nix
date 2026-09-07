@@ -3,6 +3,7 @@
 {
   imports = [
     ./global
+    ./programs/cli/neovim/vimtex.nix
     ./programs/desktop/alacritty.nix
     ./programs/desktop/zen-browser.nix
     # ./programs/desktop/feishin.nix
