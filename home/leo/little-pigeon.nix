@@ -12,5 +12,6 @@
 
     ./programs/desktop/slack.nix
     ./programs/desktop/obsidian.nix
+    ./programs/desktop/darktable.nix
   ];
 }
