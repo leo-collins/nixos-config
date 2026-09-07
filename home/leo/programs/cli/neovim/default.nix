@@ -5,6 +5,7 @@
     inputs.nixvim.homeModules.nixvim
     ./completion.nix
     ./dap.nix
+    ./diffview.nix
     ./keymaps.nix
     ./lsp.nix
     ./options.nix
