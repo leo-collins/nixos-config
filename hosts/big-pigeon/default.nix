@@ -14,6 +14,7 @@
 
     ../common/optional/ssh.nix
     ../common/optional/tailscale.nix 
+    ../common/optional/btop-intel.nix
     
     # Services
     ./services/immich.nix
