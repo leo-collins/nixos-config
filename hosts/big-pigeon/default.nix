@@ -13,6 +13,7 @@
     ../common/users/leo
 
     ../common/optional/ssh.nix
+    ../common/optional/zswap.nix
     ../common/optional/tailscale.nix 
     ../common/optional/btop-intel.nix
     
