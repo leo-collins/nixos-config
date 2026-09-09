@@ -11,5 +11,12 @@
         cudaSupport = true;
       }
     );
+
+    settings = {
+      shown_boxes = "cpu mem net proc";
+      shown_gpus = "nvidia amd intel apple";
+      show_gpu_info = "On";
+      update_ms = 500;
+    };
   };
 }

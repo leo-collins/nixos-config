@@ -18,5 +18,6 @@
     ../common/optional/niri.nix
     ../common/optional/noctalia.nix
     ../common/optional/noctalia-greeter.nix
+    ../common/optional/btop-intel.nix
   ];
 }
