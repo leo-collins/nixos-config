@@ -4,6 +4,7 @@
   imports = [
     ./group.nix
     ./plex.nix
+    ./jellyfin.nix
     ./sonarr.nix
     ./radarr.nix
     ./sabnzbd.nix
