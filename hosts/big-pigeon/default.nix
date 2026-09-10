@@ -16,6 +16,7 @@
     ../common/optional/zswap.nix
     ../common/optional/tailscale.nix 
     ../common/optional/btop-intel.nix
+    ../common/optional/intel-graphics.nix
     
     # Services
     ./services/immich.nix
