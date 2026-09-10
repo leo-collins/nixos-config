@@ -11,6 +11,7 @@
     ../common/users/leo
 
     ../common/optional/zswap.nix
+    ../common/optional/intel-graphics.nix
     ../common/optional/ssh.nix
     ../common/optional/nfs-client.nix
     ../common/optional/tailscale.nix
