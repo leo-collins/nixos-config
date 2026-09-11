@@ -48,4 +48,10 @@ in
     fsType = "nfs";
     options = nfsOptions;
   };
+
+  fileSystems."/mnt/big-pigeon/videos" = {
+    device = "${bigPigeon}:/videos";
+    fsType = "nfs";
+    options = nfsOptions;
+  };
 }
