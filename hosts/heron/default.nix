@@ -17,5 +17,8 @@
     ../common/optional/ssh.nix
     ../common/optional/tailscale.nix
     ../common/optional/steam.nix
+    ../common/optional/noctalia-greeter.nix
+
+    ./noctalia-greeter.nix
   ];
 }
