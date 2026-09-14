@@ -29,6 +29,7 @@
     ./services/slskd.nix
     ./services/qbittorrent.nix
     ./services/actual.nix
+    ./services/dawarich.nix
 
     ./services/media
 
