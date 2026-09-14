@@ -28,5 +28,12 @@
     "org/gnome/desktop/interface" = {
       scaling-factor = lib.gvariant.mkUint32 2;
     };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-timeout = 0;
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-timeout = 0;
+      sleep-inactive-battery-type = "nothing";
+    };
   };
 }
