@@ -1,16 +1,34 @@
 { lib, pkgs, ... }:
 
 {
-  # apple aluminium keyboard a1243
-  services.xserver.xkb.model = "applealu_iso";
-  services.xserver.xkb.variant = lib.mkForce "mac";
+  # Keychron K1 ISO keyboard
+  services.xserver.xkb = {
+    extraLayouts.keychron_k1 = {
+      description = "Keychron K1 UK layout";
+      languages = [ "eng" ];
+      symbolsFile = pkgs.writeText "keychron-k1-xkb" ''
+        partial alphanumeric_keys
+        xkb_symbols "keychron_k1" {
+          // Use the UK Mac symbol positions used by the K1's Mac layer.
+          include "gb(mac)"
+
+          // The K1 reports these two ISO positions in reverse order.
+          key <TLDE> { [ grave,   asciitilde ] };
+          key <LSGT> { [ section, plusminus  ] };
+        };
+      '';
+    };
+    model = "pc105";
+    layout = lib.mkForce "keychron_k1";
+    variant = lib.mkForce "";
+  };
 
   home-manager.users.leo.home.packages = [ pkgs.wtype ];
 
   home-manager.users.leo.programs.niri.settings.input.keyboard.xkb = {
-    model = "applealu_iso";
-    layout = "gb";
-    variant = "mac";
+    model = "pc105";
+    layout = "keychron_k1";
+    variant = "";
   };
 
   home-manager.users.leo.programs.niri.settings.binds."Alt+3" = {
