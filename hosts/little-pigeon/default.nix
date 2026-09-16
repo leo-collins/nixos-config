@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -21,4 +21,11 @@
     ../common/optional/noctalia-greeter.nix
     ../common/optional/btop-intel.nix
   ];
+
+  environment.systemPackages = with pkgs; [
+    xauth
+    xwayland-satellite
+  ];
+
+  programs.ssh.setXAuthLocation = true;
 }
