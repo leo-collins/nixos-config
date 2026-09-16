@@ -18,4 +18,6 @@
     ../common/optional/noctalia.nix
     ../common/optional/noctalia-greeter.nix
   ];
+
+  services.openssh.settings.X11Forwarding = true;
 }
