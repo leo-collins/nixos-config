@@ -7,5 +7,6 @@
     ./zen-browser.nix
     ./feishin.nix
     ./plex-desktop.nix
+    ./xdg.nix
   ];
 }

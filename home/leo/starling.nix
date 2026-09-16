@@ -3,10 +3,6 @@
 {
   imports = [
     ./global
+    ./programs/desktop/xdg.nix
   ];
-
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-  };
 }
