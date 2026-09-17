@@ -17,6 +17,7 @@
     ../common/optional/tailscale.nix 
     ../common/optional/btop-intel.nix
     ../common/optional/intel-graphics.nix
+    ../common/optional/syncthing.nix
     
     # Services
     ./services/immich.nix
