@@ -13,6 +13,7 @@
     ./programs/desktop/xdg.nix
 
     ./programs/desktop/slack.nix
+    ./programs/desktop/zotero.nix
     ./programs/desktop/obsidian.nix
   ];
 }
