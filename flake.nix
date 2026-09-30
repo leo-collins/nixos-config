@@ -112,5 +112,11 @@
           ./home/leo/thisbe.nix
         ];
       };
+      homeConfigurations."leo@ubuntu26-dev" = mkHome {
+        system = "x86_64-linux";
+	modules = [
+	  ./home/leo/vm.nix
+        ];
+      };
     };
 }
