@@ -4,6 +4,12 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # Fix for Zotero from https://github.com/NixOS/nixpkgs/pull/569006. Issue: https://github.com/NixOS/nixpkgs/issues/568692
+    zotero-fix-src = {
+      url = "github:Mynacol/nixpkgs/27ef21d8870cae52dbd8b48c13e9cd8abf240e16";
+      flake = false;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
