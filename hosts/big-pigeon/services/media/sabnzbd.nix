@@ -28,8 +28,8 @@
 
     settings = {
       misc = {
-        bandwidth_max = "30MB/s";
-        bandwidth_perc = 80;
+        bandwidth_max = "100MB/s";
+        bandwidth_perc = 100;
         cache_limit = "1000M";
         host = "0.0.0.0";
         port = 8080;
