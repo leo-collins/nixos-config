@@ -18,6 +18,7 @@
     ./nh.nix
     ./fd.nix
     ./ripgrep.nix
+    ./csvlens.nix
   ];
 
   home.packages = with pkgs; [
