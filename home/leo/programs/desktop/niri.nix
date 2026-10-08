@@ -1,10 +1,39 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     brightnessctl
     playerctl
+    swayimg
   ];
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = lib.genAttrs [
+      "image/avif"
+      "image/bmp"
+      "image/gif"
+      "image/heif"
+      "image/jpeg"
+      "image/jpg"
+      "image/jxl"
+      "image/pbm"
+      "image/pjpeg"
+      "image/png"
+      "image/svg+xml"
+      "image/tiff"
+      "image/webp"
+      "image/x-bmp"
+      "image/x-exr"
+      "image/x-png"
+      "image/x-portable-anymap"
+      "image/x-portable-bitmap"
+      "image/x-portable-graymap"
+      "image/x-portable-pixmap"
+      "image/x-targa"
+      "image/x-tga"
+    ] (_: [ "swayimg.desktop" ]);
+  };
 
   home.pointerCursor = {
     enable = true;
