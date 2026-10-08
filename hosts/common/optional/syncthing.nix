@@ -11,6 +11,9 @@ let
     little-pigeon = {
       id = "QOXO2NN-TF7HL7Z-BHDZJQQ-5LHQBB2-NR443IV-GYGFQI5-NIPHBM5-ZSVSGQS";
     };
+    mallard = {
+      id = "MC2RPUX-6HBT3AU-JDIXJ7K-CHDIEJ6-7OTWOQS-BK3FDWA-LNQFEPO-YUUDSA3";
+    };
   };
 
   remoteDevices = removeAttrs allDevices [ hostName ];
@@ -39,6 +42,7 @@ in
           path = {
             big-pigeon = "/tank/documents";
             little-pigeon = "/home/leo/Documents";
+            mallard = "/home/leo/Documents";
           }.${hostName};
           devices = builtins.attrNames remoteDevices;
         };

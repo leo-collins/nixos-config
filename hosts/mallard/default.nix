@@ -17,7 +17,9 @@
     ../common/optional/niri.nix
     ../common/optional/noctalia.nix
     ../common/optional/noctalia-greeter.nix
+    ../common/optional/syncthing.nix
   ];
 
   services.openssh.settings.X11Forwarding = true;
+
 }
