@@ -8,6 +8,9 @@
     settings = {
       shell.font_family = "sans-serif";
 
+      # Disable lockscreen animations
+      lockscreen.transition = [ ];
+
       theme = {
         source = "builtin";
         builtin = "Gruvbox";
