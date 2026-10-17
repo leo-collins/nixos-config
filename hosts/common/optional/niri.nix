@@ -19,4 +19,5 @@
 
   console.keyMap = "uk";
   services.printing.enable = true;
+  services.gvfs.enable = true;
 }
