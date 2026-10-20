@@ -15,6 +15,10 @@
     ./programs/cli/neovim/vimtex.nix
   ];
 
+  programs.zsh.initContent = ''
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+  '';
+
   home = {
     username = "lac224";
     homeDirectory = "/Users/lac224";
