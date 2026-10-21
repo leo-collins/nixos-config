@@ -15,7 +15,7 @@
     # ./programs/desktop/zotero.nix
     ./programs/desktop/obsidian.nix
     ./programs/desktop/darktable.nix
-    ./programs/desktop/picard/picard.nix
+    # ./programs/desktop/picard/picard.nix
     ./programs/cli/whipper.nix
   ];
 }
