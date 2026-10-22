@@ -4,16 +4,16 @@
   imports = [
     ./global
     ./programs/cli/neovim/vimtex.nix
-    ./programs/desktop/alacritty.nix
-    ./programs/desktop/zen-browser.nix
+    # ./programs/desktop/alacritty.nix
+    # ./programs/desktop/zen-browser.nix
     # ./programs/desktop/feishin.nix
-    ./programs/desktop/niri.nix
-    ./programs/desktop/noctalia.nix
-    ./programs/desktop/nautilus.nix
+    # ./programs/desktop/niri.nix
+    # ./programs/desktop/noctalia.nix
+    # ./programs/desktop/nautilus.nix
     ./programs/desktop/xdg.nix
 
-    ./programs/desktop/slack.nix
-    ./programs/desktop/zotero.nix
-    ./programs/desktop/obsidian.nix
+    # ./programs/desktop/slack.nix
+    # ./programs/desktop/zotero.nix
+    # ./programs/desktop/obsidian.nix
   ];
 }
