@@ -3,25 +3,19 @@
 let
   replaygain2Plugin = pkgs.fetchFromGitHub {
     owner = "metabrainz";
-    repo = "picard-plugins";
-    rev = "efb04f6f9834a33573deb953ec3824f8bb828e15";
-    hash = "sha256-SzESA0LMGzpOJupTb2seGWBvmcZ/Dnwun4dTwXtgyXU=";
+    repo = "picard-plugin-replaygain2";
+    rev = "39fbcaaa9e0caa5be91f8ef8d2497b245fd21483";
+    hash = "sha256-0UhCnNFBRlzP1G4ZEOOZkP+Z1QHCoSKaOWO2l14weyM=";
   };
-
-  picardWithReplaygain2 = pkgs.picard.overrideAttrs (old: {
-    postInstall = (old.postInstall or "") + ''
-      pluginDir=$(echo "$out"/lib/python*/site-packages/picard/plugins)
-      mkdir -p "$pluginDir"
-      ln -s ${replaygain2Plugin}/plugins/replaygain2 \
-        "$pluginDir/replaygain2"
-    '';
-  });
 in
 {
   home.packages = [
-    picardWithReplaygain2
+    pkgs.picard
     pkgs.rsgain
   ];
+
+  xdg.dataFile."MusicBrainz/Picard/plugins3/replaygain2".source =
+    replaygain2Plugin;
 
   home.file.".config/MusicBrainz/Picard.ini" = {
     # Use a string rather than a Nix path here.  A Nix path is copied to the
