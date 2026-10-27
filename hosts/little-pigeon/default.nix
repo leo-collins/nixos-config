@@ -21,6 +21,7 @@
     ../common/optional/noctalia-greeter.nix
     ../common/optional/btop-intel.nix
     ../common/optional/syncthing.nix
+    ../common/optional/beszel.nix
   ];
 
   environment.systemPackages = with pkgs; [
