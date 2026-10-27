@@ -33,6 +33,9 @@
     ./services/actual.nix
     ./services/dawarich.nix
 
+    ./services/beszel.nix  # beszel hub
+    ../common/optional/beszel.nix  # beszel agent
+
     ./services/media
 
     ./services/minecraft.nix
