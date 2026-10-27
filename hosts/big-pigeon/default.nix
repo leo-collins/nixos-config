@@ -20,6 +20,7 @@
     ../common/optional/syncthing.nix
     
     # Services
+    ./services/crowdsec.nix
     ./services/immich.nix
     ./services/navidrome.nix
     ./services/incus.nix
