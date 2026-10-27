@@ -22,7 +22,18 @@
       ];
 
       settings = {
-        config.api.server.listen_uri = "127.0.0.1:8086";
+        config.api.server = {
+          listen_uri = "127.0.0.1:8086";
+          online_client = {
+            credentials_path =
+              "/var/lib/crowdsec/data/online_api_credentials.yaml";
+            sharing = true;
+            pull = {
+              community = true;
+              blocklists = true;
+            };
+          };
+        };
 
         # Read caddy and SSH logs
         acquisitions = [
