@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
 {
   # apply json journal logging to all caddy virtualHosts
@@ -58,17 +58,35 @@
       settings.mode = "nftables";
     };
 
+    # exempt local LAN and tailscale ip addresses
+    systemd.services.crowdsec.postStart = ''
+      cscli=${lib.getExe' config.services.crowdsec.package "cscli"}
+      if "$cscli" allowlists inspect nixos-local-networks >/dev/null 2>&1; then
+        "$cscli" allowlists delete nixos-local-networks
+      fi
+      "$cscli" allowlists create nixos-local-networks \
+        --description "LAN and Tailscale networks managed by NixOS"
+      "$cscli" allowlists add nixos-local-networks \
+        192.168.1.0/24 \
+        100.64.0.0/10 \
+        fd7a:115c:a1e0::/48
+    '';
+
+    # Restart enforcement after CrowdSec and its allowlist are ready.
+    systemd.services.crowdsec-firewall-bouncer = {
+      partOf = [ "crowdsec.service" ];
+      serviceConfig = {
+        Restart = "on-failure";
+        RestartSec = "10s";
+      };
+    };
+
     # an nftables reload will clear crowdsec's blocked IP sets
     systemd.services.nftables.reloadIfChanged = lib.mkForce false;
 
     systemd.services.crowdsec-setup.serviceConfig = {
       Restart = "on-failure";
       RestartSec = "30s";
-    };
-
-    systemd.services.crowdsec-firewall-bouncer.serviceConfig = {
-      Restart = "on-failure";
-      RestartSec = "10s";
     };
   };
 }
