@@ -18,6 +18,7 @@
     ../common/optional/tailscale.nix
     ../common/optional/steam.nix
     ../common/optional/noctalia-greeter.nix
+    ../common/optional/beszel.nix
 
     ./noctalia-greeter.nix
   ];
