@@ -22,6 +22,7 @@
     # Services
     ./services/crowdsec.nix
     ./services/immich.nix
+    ./services/frigate.nix
     ./services/navidrome.nix
     ./services/incus.nix
     ./services/nfs.nix
