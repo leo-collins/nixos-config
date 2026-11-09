@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = [
-    pkgs.codex
+    #pkgs.codex
+    # until https://github.com/NixOS/nixpkgs/issues/585124 is resolved
+    inputs.nixpkgs-codex.legacyPackages.${pkgs.stdenv.hostPlatform.system}.codex
     pkgs.mcp-nixos
   ];
 

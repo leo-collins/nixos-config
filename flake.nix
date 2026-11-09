@@ -4,6 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # until https://github.com/NixOS/nixpkgs/issues/585124 is resolved
+    nixpkgs-codex.url = "github:NixOS/nixpkgs/54020e34612d3905b97ec1ed45953e21d0b4411a";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
